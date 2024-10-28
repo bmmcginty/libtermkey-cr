@@ -1,0 +1,9 @@
+name: libtermkey-cr
+version: 0.0.1
+
+authors:
+  - Brandon McGinty <git@bmcginty.us>
+
+crystal: '>= 1.14.0'
+
+license: MIT
