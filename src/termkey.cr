@@ -37,6 +37,13 @@ class Termkey
     LibTermkey.waitkey @t, @key_ptr
   end
 
+def getpos
+line=0
+col=0
+res=LibTermkey.interpret_position @t, @key_ptr, pointerof(line), pointerof(col)
+{res,line,col}
+end
+
   def strfkey
     sz = LibTermkey.strfkey(@t, @slice, @slice.size, @key_ptr, @format)
     ret = String.new @slice[0...sz].dup
